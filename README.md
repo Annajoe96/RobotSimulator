@@ -41,7 +41,10 @@ bot.turn_left!
 ```
 This will update the direction the robot is facing without updating the coordinates of the robot. Further `move!` commands will move the robot in that direction. 
 
-
-
+Getting back data:
+```
+bot.get_direction # => [2,3]
+bot.get_direction # => "north"
+```
 
 
