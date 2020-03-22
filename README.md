@@ -43,7 +43,7 @@ This will update the direction the robot is facing without updating the coordina
 
 Getting back data:
 ```
-bot.get_direction # => [2,3]
+bot.get_position # => [2,3]
 bot.get_direction # => "north"
 ```
 
