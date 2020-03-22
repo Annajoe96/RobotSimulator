@@ -1,16 +1,14 @@
 class Robot
 
-#initilaizing first position of the robot
-
+  # initilaizing first position of the robot
+  # starts at 0,0 as default position
   def initialize(x: 0 , y: 0, direction: "north")
     @x = x
     @y = y
     @direction = direction
   end
   
-  #depending on the direction the robot is facing the commands influence the robots position
-
-  def turn_right
+  def turn_right!
     if @direction == "north"
       @direction = "east"  
     elsif @direction == "east"
@@ -22,7 +20,7 @@ class Robot
     end
   end
   
-  def turn_left 
+  def turn_left!
     if @direction == "north"
       @direction = "west"
     elsif @direction == "west"
@@ -34,9 +32,8 @@ class Robot
     end
   end
   
-  #progess of steps taken according to instruction
-
-  def move
+  # move one step in the direction it is facing
+  def move!
     if @direction == "east"
       @x += 1
     elsif @direction == "north"
@@ -48,13 +45,9 @@ class Robot
     end
   end
   
-  #to get the current position
-  
   def get_position 
     [@x, @y]
   end
-  
-  #to get current position
   
   def get_direction
     @direction
